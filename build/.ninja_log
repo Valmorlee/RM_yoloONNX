@@ -1,0 +1,14 @@
+# ninja log v5
+0	5430	1742022587011692619	CMakeFiles/Local_Lib_Static.dir/src/ArmorDetector.cpp.o	14c562eed820b5fb
+1	6677	1742022588258716473	CMakeFiles/RM_yoloONNX.dir/main.cpp.o	f364077f7ad595e9
+1	5490	1742022587074693824	CMakeFiles/Local_Lib_Static.dir/src/Param.cpp.o	95c6bf9479cb34f3
+1	5778	1742022587360699296	CMakeFiles/Local_Lib_Shared.dir/src/Param.cpp.o	6619f338ce83389e
+2	6166	1742022587748706719	CMakeFiles/RM_yoloONNX.dir/src/ArmorDetector.cpp.o	6a1d55a79663f1
+2	5707	1742022587289697937	CMakeFiles/RM_yoloONNX.dir/src/Param.cpp.o	77c6c102ee62bec0
+2	5862	1742022587442700865	CMakeFiles/RM_yoloONNX.dir/src/Yolo.cpp.o	134c04a15631b488
+1	6382	1742022587964710851	CMakeFiles/Local_Lib_Static.dir/src/Yolo.cpp.o	128193fbba9b1578
+1	6432	1742022588014711808	CMakeFiles/Local_Lib_Shared.dir/src/ArmorDetector.cpp.o	a5cf795181b9da08
+7090	7180	1742022588762726108	/home/valmorx/CLionProjects/RM_yoloONNX/lib/libLocal_Lib.so	e1197faf667f313f
+6382	6552	1742022588079713050	/home/valmorx/CLionProjects/RM_yoloONNX/lib/libLocal_Lib.a	58b4b53d3873aeb7
+6677	7030	1742022588608723164	/home/valmorx/CLionProjects/RM_yoloONNX/out/RM_yoloONNX	dcc29e9c6849ea03
+1	7090	1742022588671724368	CMakeFiles/Local_Lib_Shared.dir/src/Yolo.cpp.o	22088500830217d3

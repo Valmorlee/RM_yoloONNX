@@ -1,6 +1,14 @@
-#include <iostream>
+#include "ArmorDetector.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+    // std::ios::sync_with_stdio(false);
+    // std::cin.tie(0);
+    // std::cout.tie(0);
+
+    ArmorDetector detector;
+    detector.init(RED);
+    detector.loadImg();
+    detector.detect();
+
 }
