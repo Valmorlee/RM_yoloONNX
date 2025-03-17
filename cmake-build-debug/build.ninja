@@ -52,21 +52,21 @@ build cmake_object_order_depends_target_Local_Lib_Static: phony || CMakeFiles/RM
 build CMakeFiles/Local_Lib_Static.dir/src/ArmorDetector.cpp.o: CXX_COMPILER__Local_Lib_Static_unscanned_Debug /home/valmorx/CLionProjects/RM_yoloONNX/src/ArmorDetector.cpp || cmake_object_order_depends_target_Local_Lib_Static
   DEP_FILE = CMakeFiles/Local_Lib_Static.dir/src/ArmorDetector.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO
   OBJECT_DIR = CMakeFiles/Local_Lib_Static.dir
   OBJECT_FILE_DIR = CMakeFiles/Local_Lib_Static.dir/src
 
 build CMakeFiles/Local_Lib_Static.dir/src/Param.cpp.o: CXX_COMPILER__Local_Lib_Static_unscanned_Debug /home/valmorx/CLionProjects/RM_yoloONNX/src/Param.cpp || cmake_object_order_depends_target_Local_Lib_Static
   DEP_FILE = CMakeFiles/Local_Lib_Static.dir/src/Param.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO
   OBJECT_DIR = CMakeFiles/Local_Lib_Static.dir
   OBJECT_FILE_DIR = CMakeFiles/Local_Lib_Static.dir/src
 
 build CMakeFiles/Local_Lib_Static.dir/src/Yolo.cpp.o: CXX_COMPILER__Local_Lib_Static_unscanned_Debug /home/valmorx/CLionProjects/RM_yoloONNX/src/Yolo.cpp || cmake_object_order_depends_target_Local_Lib_Static
   DEP_FILE = CMakeFiles/Local_Lib_Static.dir/src/Yolo.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO
   OBJECT_DIR = CMakeFiles/Local_Lib_Static.dir
   OBJECT_FILE_DIR = CMakeFiles/Local_Lib_Static.dir/src
 
@@ -99,7 +99,7 @@ build CMakeFiles/Local_Lib_Shared.dir/src/ArmorDetector.cpp.o: CXX_COMPILER__Loc
   DEFINES = -DLocal_Lib_Shared_EXPORTS
   DEP_FILE = CMakeFiles/Local_Lib_Shared.dir/src/ArmorDetector.cpp.o.d
   FLAGS = -g -std=gnu++20 -fPIC -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO
   OBJECT_DIR = CMakeFiles/Local_Lib_Shared.dir
   OBJECT_FILE_DIR = CMakeFiles/Local_Lib_Shared.dir/src
 
@@ -107,7 +107,7 @@ build CMakeFiles/Local_Lib_Shared.dir/src/Param.cpp.o: CXX_COMPILER__Local_Lib_S
   DEFINES = -DLocal_Lib_Shared_EXPORTS
   DEP_FILE = CMakeFiles/Local_Lib_Shared.dir/src/Param.cpp.o.d
   FLAGS = -g -std=gnu++20 -fPIC -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO
   OBJECT_DIR = CMakeFiles/Local_Lib_Shared.dir
   OBJECT_FILE_DIR = CMakeFiles/Local_Lib_Shared.dir/src
 
@@ -115,7 +115,7 @@ build CMakeFiles/Local_Lib_Shared.dir/src/Yolo.cpp.o: CXX_COMPILER__Local_Lib_Sh
   DEFINES = -DLocal_Lib_Shared_EXPORTS
   DEP_FILE = CMakeFiles/Local_Lib_Shared.dir/src/Yolo.cpp.o.d
   FLAGS = -g -std=gnu++20 -fPIC -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/usr/local/include/opencv4 -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO
   OBJECT_DIR = CMakeFiles/Local_Lib_Shared.dir
   OBJECT_FILE_DIR = CMakeFiles/Local_Lib_Shared.dir/src
 
@@ -129,7 +129,7 @@ build CMakeFiles/Local_Lib_Shared.dir/src/Yolo.cpp.o: CXX_COMPILER__Local_Lib_Sh
 
 build /home/valmorx/CLionProjects/RM_yoloONNX/lib/libLocal_Lib.so: CXX_SHARED_LIBRARY_LINKER__Local_Lib_Shared_Debug CMakeFiles/Local_Lib_Shared.dir/src/ArmorDetector.cpp.o CMakeFiles/Local_Lib_Shared.dir/src/Param.cpp.o CMakeFiles/Local_Lib_Shared.dir/src/Yolo.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
-  LINK_PATH = -L/usr/local/cuda/lib64   -L/home/valmorx/DeepLearningSource/cudnn-8.9.7/lib   -L/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../lib
+  LINK_PATH = -L/usr/local/cuda/lib64   -L/home/valmorx/DeepLearningSource/cudnn-8.9.7/lib   -L/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../lib   -L/home/valmorx/DeepLearningSource/TensorRT-YOLO/lib
   OBJECT_DIR = CMakeFiles/Local_Lib_Shared.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -150,28 +150,28 @@ build cmake_object_order_depends_target_RM_yoloONNX: phony || CMakeFiles/RM_yolo
 build CMakeFiles/RM_yoloONNX.dir/main.cpp.o: CXX_COMPILER__RM_yoloONNX_unscanned_Debug /home/valmorx/CLionProjects/RM_yoloONNX/main.cpp || cmake_object_order_depends_target_RM_yoloONNX
   DEP_FILE = CMakeFiles/RM_yoloONNX.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -isystem /usr/local/include/opencv4
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/RM_yoloONNX.dir
   OBJECT_FILE_DIR = CMakeFiles/RM_yoloONNX.dir
 
 build CMakeFiles/RM_yoloONNX.dir/src/ArmorDetector.cpp.o: CXX_COMPILER__RM_yoloONNX_unscanned_Debug /home/valmorx/CLionProjects/RM_yoloONNX/src/ArmorDetector.cpp || cmake_object_order_depends_target_RM_yoloONNX
   DEP_FILE = CMakeFiles/RM_yoloONNX.dir/src/ArmorDetector.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -isystem /usr/local/include/opencv4
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/RM_yoloONNX.dir
   OBJECT_FILE_DIR = CMakeFiles/RM_yoloONNX.dir/src
 
 build CMakeFiles/RM_yoloONNX.dir/src/Param.cpp.o: CXX_COMPILER__RM_yoloONNX_unscanned_Debug /home/valmorx/CLionProjects/RM_yoloONNX/src/Param.cpp || cmake_object_order_depends_target_RM_yoloONNX
   DEP_FILE = CMakeFiles/RM_yoloONNX.dir/src/Param.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -isystem /usr/local/include/opencv4
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/RM_yoloONNX.dir
   OBJECT_FILE_DIR = CMakeFiles/RM_yoloONNX.dir/src
 
 build CMakeFiles/RM_yoloONNX.dir/src/Yolo.cpp.o: CXX_COMPILER__RM_yoloONNX_unscanned_Debug /home/valmorx/CLionProjects/RM_yoloONNX/src/Yolo.cpp || cmake_object_order_depends_target_RM_yoloONNX
   DEP_FILE = CMakeFiles/RM_yoloONNX.dir/src/Yolo.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -isystem /usr/local/include/opencv4
+  INCLUDES = -I/usr/local/cuda/include -I/home/valmorx/DeepLearningSource/cudnn-8.9.7/include -I/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../include -I/home/valmorx/DeepLearningSource/TensorRT-YOLO -isystem /usr/local/include/opencv4
   OBJECT_DIR = CMakeFiles/RM_yoloONNX.dir
   OBJECT_FILE_DIR = CMakeFiles/RM_yoloONNX.dir/src
 
@@ -185,8 +185,8 @@ build CMakeFiles/RM_yoloONNX.dir/src/Yolo.cpp.o: CXX_COMPILER__RM_yoloONNX_unsca
 
 build /home/valmorx/CLionProjects/RM_yoloONNX/out/RM_yoloONNX: CXX_EXECUTABLE_LINKER__RM_yoloONNX_Debug CMakeFiles/RM_yoloONNX.dir/__/src/RM_yoloONNX_generated_Yolo.cu.o CMakeFiles/RM_yoloONNX.dir/main.cpp.o CMakeFiles/RM_yoloONNX.dir/src/ArmorDetector.cpp.o CMakeFiles/RM_yoloONNX.dir/src/Param.cpp.o CMakeFiles/RM_yoloONNX.dir/src/Yolo.cpp.o | /usr/local/cuda/lib64/libcudart_static.a /usr/lib/x86_64-linux-gnu/librt.a /usr/local/lib/libopencv_gapi.so.4.10.0 /usr/local/lib/libopencv_stitching.so.4.10.0 /usr/local/lib/libopencv_alphamat.so.4.10.0 /usr/local/lib/libopencv_aruco.so.4.10.0 /usr/local/lib/libopencv_bgsegm.so.4.10.0 /usr/local/lib/libopencv_bioinspired.so.4.10.0 /usr/local/lib/libopencv_ccalib.so.4.10.0 /usr/local/lib/libopencv_cudabgsegm.so.4.10.0 /usr/local/lib/libopencv_cudafeatures2d.so.4.10.0 /usr/local/lib/libopencv_cudaobjdetect.so.4.10.0 /usr/local/lib/libopencv_cudastereo.so.4.10.0 /usr/local/lib/libopencv_dnn_objdetect.so.4.10.0 /usr/local/lib/libopencv_dnn_superres.so.4.10.0 /usr/local/lib/libopencv_dpm.so.4.10.0 /usr/local/lib/libopencv_face.so.4.10.0 /usr/local/lib/libopencv_freetype.so.4.10.0 /usr/local/lib/libopencv_fuzzy.so.4.10.0 /usr/local/lib/libopencv_hfs.so.4.10.0 /usr/local/lib/libopencv_img_hash.so.4.10.0 /usr/local/lib/libopencv_intensity_transform.so.4.10.0 /usr/local/lib/libopencv_line_descriptor.so.4.10.0 /usr/local/lib/libopencv_mcc.so.4.10.0 /usr/local/lib/libopencv_quality.so.4.10.0 /usr/local/lib/libopencv_rapid.so.4.10.0 /usr/local/lib/libopencv_reg.so.4.10.0 /usr/local/lib/libopencv_rgbd.so.4.10.0 /usr/local/lib/libopencv_saliency.so.4.10.0 /usr/local/lib/libopencv_signal.so.4.10.0 /usr/local/lib/libopencv_stereo.so.4.10.0 /usr/local/lib/libopencv_structured_light.so.4.10.0 /usr/local/lib/libopencv_superres.so.4.10.0 /usr/local/lib/libopencv_surface_matching.so.4.10.0 /usr/local/lib/libopencv_tracking.so.4.10.0 /usr/local/lib/libopencv_videostab.so.4.10.0 /usr/local/lib/libopencv_wechat_qrcode.so.4.10.0 /usr/local/lib/libopencv_xfeatures2d.so.4.10.0 /usr/local/lib/libopencv_xobjdetect.so.4.10.0 /usr/local/lib/libopencv_xphoto.so.4.10.0 /usr/local/lib/libopencv_shape.so.4.10.0 /usr/local/lib/libopencv_highgui.so.4.10.0 /usr/local/lib/libopencv_datasets.so.4.10.0 /usr/local/lib/libopencv_plot.so.4.10.0 /usr/local/lib/libopencv_text.so.4.10.0 /usr/local/lib/libopencv_ml.so.4.10.0 /usr/local/lib/libopencv_phase_unwrapping.so.4.10.0 /usr/local/lib/libopencv_cudacodec.so.4.10.0 /usr/local/lib/libopencv_videoio.so.4.10.0 /usr/local/lib/libopencv_cudaoptflow.so.4.10.0 /usr/local/lib/libopencv_cudalegacy.so.4.10.0 /usr/local/lib/libopencv_cudawarping.so.4.10.0 /usr/local/lib/libopencv_optflow.so.4.10.0 /usr/local/lib/libopencv_ximgproc.so.4.10.0 /usr/local/lib/libopencv_video.so.4.10.0 /usr/local/lib/libopencv_imgcodecs.so.4.10.0 /usr/local/lib/libopencv_objdetect.so.4.10.0 /usr/local/lib/libopencv_calib3d.so.4.10.0 /usr/local/lib/libopencv_dnn.so.4.10.0 /usr/local/lib/libopencv_features2d.so.4.10.0 /usr/local/lib/libopencv_flann.so.4.10.0 /usr/local/lib/libopencv_photo.so.4.10.0 /usr/local/lib/libopencv_cudaimgproc.so.4.10.0 /usr/local/lib/libopencv_cudafilters.so.4.10.0 /usr/local/lib/libopencv_imgproc.so.4.10.0 /usr/local/lib/libopencv_cudaarithm.so.4.10.0 /usr/local/lib/libopencv_core.so.4.10.0 /usr/local/lib/libopencv_cudev.so.4.10.0
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/usr/local/cuda/lib64:/home/valmorx/DeepLearningSource/cudnn-8.9.7/lib:/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../lib:/usr/local/lib  /usr/local/cuda/lib64/libcudart_static.a  -ldl  /usr/lib/x86_64-linux-gnu/librt.a  /usr/local/lib/libopencv_gapi.so.4.10.0  /usr/local/lib/libopencv_stitching.so.4.10.0  /usr/local/lib/libopencv_alphamat.so.4.10.0  /usr/local/lib/libopencv_aruco.so.4.10.0  /usr/local/lib/libopencv_bgsegm.so.4.10.0  /usr/local/lib/libopencv_bioinspired.so.4.10.0  /usr/local/lib/libopencv_ccalib.so.4.10.0  /usr/local/lib/libopencv_cudabgsegm.so.4.10.0  /usr/local/lib/libopencv_cudafeatures2d.so.4.10.0  /usr/local/lib/libopencv_cudaobjdetect.so.4.10.0  /usr/local/lib/libopencv_cudastereo.so.4.10.0  /usr/local/lib/libopencv_dnn_objdetect.so.4.10.0  /usr/local/lib/libopencv_dnn_superres.so.4.10.0  /usr/local/lib/libopencv_dpm.so.4.10.0  /usr/local/lib/libopencv_face.so.4.10.0  /usr/local/lib/libopencv_freetype.so.4.10.0  /usr/local/lib/libopencv_fuzzy.so.4.10.0  /usr/local/lib/libopencv_hfs.so.4.10.0  /usr/local/lib/libopencv_img_hash.so.4.10.0  /usr/local/lib/libopencv_intensity_transform.so.4.10.0  /usr/local/lib/libopencv_line_descriptor.so.4.10.0  /usr/local/lib/libopencv_mcc.so.4.10.0  /usr/local/lib/libopencv_quality.so.4.10.0  /usr/local/lib/libopencv_rapid.so.4.10.0  /usr/local/lib/libopencv_reg.so.4.10.0  /usr/local/lib/libopencv_rgbd.so.4.10.0  /usr/local/lib/libopencv_saliency.so.4.10.0  /usr/local/lib/libopencv_signal.so.4.10.0  /usr/local/lib/libopencv_stereo.so.4.10.0  /usr/local/lib/libopencv_structured_light.so.4.10.0  /usr/local/lib/libopencv_superres.so.4.10.0  /usr/local/lib/libopencv_surface_matching.so.4.10.0  /usr/local/lib/libopencv_tracking.so.4.10.0  /usr/local/lib/libopencv_videostab.so.4.10.0  /usr/local/lib/libopencv_wechat_qrcode.so.4.10.0  /usr/local/lib/libopencv_xfeatures2d.so.4.10.0  /usr/local/lib/libopencv_xobjdetect.so.4.10.0  /usr/local/lib/libopencv_xphoto.so.4.10.0  /usr/local/lib/libopencv_shape.so.4.10.0  /usr/local/lib/libopencv_highgui.so.4.10.0  /usr/local/lib/libopencv_datasets.so.4.10.0  /usr/local/lib/libopencv_plot.so.4.10.0  /usr/local/lib/libopencv_text.so.4.10.0  /usr/local/lib/libopencv_ml.so.4.10.0  /usr/local/lib/libopencv_phase_unwrapping.so.4.10.0  /usr/local/lib/libopencv_cudacodec.so.4.10.0  /usr/local/lib/libopencv_videoio.so.4.10.0  /usr/local/lib/libopencv_cudaoptflow.so.4.10.0  /usr/local/lib/libopencv_cudalegacy.so.4.10.0  /usr/local/lib/libopencv_cudawarping.so.4.10.0  /usr/local/lib/libopencv_optflow.so.4.10.0  /usr/local/lib/libopencv_ximgproc.so.4.10.0  /usr/local/lib/libopencv_video.so.4.10.0  /usr/local/lib/libopencv_imgcodecs.so.4.10.0  /usr/local/lib/libopencv_objdetect.so.4.10.0  /usr/local/lib/libopencv_calib3d.so.4.10.0  /usr/local/lib/libopencv_dnn.so.4.10.0  /usr/local/lib/libopencv_features2d.so.4.10.0  /usr/local/lib/libopencv_flann.so.4.10.0  /usr/local/lib/libopencv_photo.so.4.10.0  /usr/local/lib/libopencv_cudaimgproc.so.4.10.0  /usr/local/lib/libopencv_cudafilters.so.4.10.0  /usr/local/lib/libopencv_imgproc.so.4.10.0  /usr/local/lib/libopencv_cudaarithm.so.4.10.0  /usr/local/lib/libopencv_core.so.4.10.0  /usr/local/lib/libopencv_cudev.so.4.10.0
-  LINK_PATH = -L/usr/local/cuda/lib64   -L/home/valmorx/DeepLearningSource/cudnn-8.9.7/lib   -L/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../lib
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/cuda/lib64:/home/valmorx/DeepLearningSource/cudnn-8.9.7/lib:/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../lib:/home/valmorx/DeepLearningSource/TensorRT-YOLO/lib:/usr/local/lib  /usr/local/cuda/lib64/libcudart_static.a  -ldl  /usr/lib/x86_64-linux-gnu/librt.a  /usr/local/lib/libopencv_gapi.so.4.10.0  /usr/local/lib/libopencv_stitching.so.4.10.0  /usr/local/lib/libopencv_alphamat.so.4.10.0  /usr/local/lib/libopencv_aruco.so.4.10.0  /usr/local/lib/libopencv_bgsegm.so.4.10.0  /usr/local/lib/libopencv_bioinspired.so.4.10.0  /usr/local/lib/libopencv_ccalib.so.4.10.0  /usr/local/lib/libopencv_cudabgsegm.so.4.10.0  /usr/local/lib/libopencv_cudafeatures2d.so.4.10.0  /usr/local/lib/libopencv_cudaobjdetect.so.4.10.0  /usr/local/lib/libopencv_cudastereo.so.4.10.0  /usr/local/lib/libopencv_dnn_objdetect.so.4.10.0  /usr/local/lib/libopencv_dnn_superres.so.4.10.0  /usr/local/lib/libopencv_dpm.so.4.10.0  /usr/local/lib/libopencv_face.so.4.10.0  /usr/local/lib/libopencv_freetype.so.4.10.0  /usr/local/lib/libopencv_fuzzy.so.4.10.0  /usr/local/lib/libopencv_hfs.so.4.10.0  /usr/local/lib/libopencv_img_hash.so.4.10.0  /usr/local/lib/libopencv_intensity_transform.so.4.10.0  /usr/local/lib/libopencv_line_descriptor.so.4.10.0  /usr/local/lib/libopencv_mcc.so.4.10.0  /usr/local/lib/libopencv_quality.so.4.10.0  /usr/local/lib/libopencv_rapid.so.4.10.0  /usr/local/lib/libopencv_reg.so.4.10.0  /usr/local/lib/libopencv_rgbd.so.4.10.0  /usr/local/lib/libopencv_saliency.so.4.10.0  /usr/local/lib/libopencv_signal.so.4.10.0  /usr/local/lib/libopencv_stereo.so.4.10.0  /usr/local/lib/libopencv_structured_light.so.4.10.0  /usr/local/lib/libopencv_superres.so.4.10.0  /usr/local/lib/libopencv_surface_matching.so.4.10.0  /usr/local/lib/libopencv_tracking.so.4.10.0  /usr/local/lib/libopencv_videostab.so.4.10.0  /usr/local/lib/libopencv_wechat_qrcode.so.4.10.0  /usr/local/lib/libopencv_xfeatures2d.so.4.10.0  /usr/local/lib/libopencv_xobjdetect.so.4.10.0  /usr/local/lib/libopencv_xphoto.so.4.10.0  /usr/local/lib/libopencv_shape.so.4.10.0  /usr/local/lib/libopencv_highgui.so.4.10.0  /usr/local/lib/libopencv_datasets.so.4.10.0  /usr/local/lib/libopencv_plot.so.4.10.0  /usr/local/lib/libopencv_text.so.4.10.0  /usr/local/lib/libopencv_ml.so.4.10.0  /usr/local/lib/libopencv_phase_unwrapping.so.4.10.0  /usr/local/lib/libopencv_cudacodec.so.4.10.0  /usr/local/lib/libopencv_videoio.so.4.10.0  /usr/local/lib/libopencv_cudaoptflow.so.4.10.0  /usr/local/lib/libopencv_cudalegacy.so.4.10.0  /usr/local/lib/libopencv_cudawarping.so.4.10.0  /usr/local/lib/libopencv_optflow.so.4.10.0  /usr/local/lib/libopencv_ximgproc.so.4.10.0  /usr/local/lib/libopencv_video.so.4.10.0  /usr/local/lib/libopencv_imgcodecs.so.4.10.0  /usr/local/lib/libopencv_objdetect.so.4.10.0  /usr/local/lib/libopencv_calib3d.so.4.10.0  /usr/local/lib/libopencv_dnn.so.4.10.0  /usr/local/lib/libopencv_features2d.so.4.10.0  /usr/local/lib/libopencv_flann.so.4.10.0  /usr/local/lib/libopencv_photo.so.4.10.0  /usr/local/lib/libopencv_cudaimgproc.so.4.10.0  /usr/local/lib/libopencv_cudafilters.so.4.10.0  /usr/local/lib/libopencv_imgproc.so.4.10.0  /usr/local/lib/libopencv_cudaarithm.so.4.10.0  /usr/local/lib/libopencv_core.so.4.10.0  /usr/local/lib/libopencv_cudev.so.4.10.0
+  LINK_PATH = -L/usr/local/cuda/lib64   -L/home/valmorx/DeepLearningSource/cudnn-8.9.7/lib   -L/home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug/../lib   -L/home/valmorx/DeepLearningSource/TensorRT-YOLO/lib
   OBJECT_DIR = CMakeFiles/RM_yoloONNX.dir
   POST_BUILD = :
   PRE_LINK = :

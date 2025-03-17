@@ -1,4 +1,4 @@
-/home/valmorx/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/valmorx/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -D CMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc -G Ninja -S /home/valmorx/CLionProjects/RM_yoloONNX -B /home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug
--- Configuring done (0.0s)
+/home/valmorx/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/valmorx/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/valmorx/CLionProjects/RM_yoloONNX -B /home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/valmorx/CLionProjects/RM_yoloONNX/cmake-build-debug

@@ -10,7 +10,7 @@
 Param::Param() {
 
     media_path = "/home/valmorx/DeepLearningSource/video.mp4";
-    onnx_path = "/home/valmorx/DeepLearningSource/ultralytics-main/runs/detect/train11/weights/best.onnx";
+    onnx_path = "/home/valmorx/CLionProjects/RM_yoloONNX/models/best.onnx";
     onnx_width = 320;
     onnx_height = 320;
     PointX = 0;
@@ -21,7 +21,7 @@ Param::Param() {
 
     is_delayMonitor = true;
     is_debug = false; //调试模式 unrealized
-
+    is_CUDA = true;
 
 }
 

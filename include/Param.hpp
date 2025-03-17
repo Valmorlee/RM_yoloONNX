@@ -25,6 +25,8 @@ public:
 
     bool is_delayMonitor;
     bool is_debug;
+    bool is_CUDA;
+
 
     int num_class;
     float nms_threshold;

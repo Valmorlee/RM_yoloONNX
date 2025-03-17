@@ -27,6 +27,11 @@ aux_source_directory(${PROJECT_BINARY_DIR}/../src SRC)
 include_directories(${PROJECT_BINARY_DIR}/../include)
 link_directories(${PROJECT_BINARY_DIR}/../lib/)
 
+#========== EXTRA ==========
+
+include_directories(/home/valmorx/DeepLearningSource/TensorRT-YOLO)
+link_directories(/home/valmorx/DeepLearningSource/TensorRT-YOLO/lib)
+
 add_library(Lib_out SHARED IMPORTED)
 set_target_properties( Lib_out PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/lib/libdeploy.so )
 add_library(Local_Lib_Static STATIC ${SRC})

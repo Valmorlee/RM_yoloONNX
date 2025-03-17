@@ -122,8 +122,8 @@ std::vector<Info> postProcess(cv::Mat &out, cv::Mat &resized_img, Param &param) 
     std::vector<std::vector<Info>> res;
     res.resize(param.PointX+5);
 
-    decode2Box(out, param.conf_threshold, res, param);
-    // decode2BoxCUDA(out, param.conf_threshold, res, param); // 等待实现
+    if (param.is_CUDA) decode2BoxCUDA(out, param.conf_threshold, res, param); // 等待实现
+    else decode2Box(out, param.conf_threshold, res, param);
 
     std::vector<Info> res_infos;
     for (int i = 0 ; i < res.size(); i++) {

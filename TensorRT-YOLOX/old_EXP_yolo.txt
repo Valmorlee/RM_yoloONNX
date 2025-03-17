@@ -1,0 +1,84 @@
+//
+// Created by valmorx on 25-3-15.
+//
+
+#include <memory>
+#include <opencv2/opencv.hpp>
+#include <sys/time.h>
+
+// 为了方便调用，模块除使用CUDA、TensorRT外，其余均使用标准库实现
+#include "deploy/model.hpp"  // 包含模型推理相关的类定义
+#include "deploy/option.hpp"  // 包含推理选项的配置类定义
+#include "deploy/result.hpp"  // 包含推理结果的定义
+
+#include<opencv2/opencv.hpp>
+
+int main() {
+    try {
+
+        // -------------------- 初始化配置 --------------------
+        deploy::InferOption option;
+        option.enableSwapRB();  // BGR->RGB转换
+
+        // 特殊模型参数设置示例
+        // const std::vector<float> mean{0.485f, 0.456f, 0.406f};
+        // const std::vector<float> std{0.229f, 0.224f, 0.225f};
+        // option.setNormalizeParams(mean, std);
+
+        // -------------------- 模型初始化 --------------------
+        auto detector = std::make_unique<deploy::DetectModel>(
+            "/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/bestx.engine",  // 模型路径
+            option                         // 推理设置
+        );
+
+        // -------------------- 数据加载 --------------------
+        cv::Mat cv_image = cv::imread("/home/valmorx/DeepLearningSource/video/00000.jpg");
+        if (cv_image.empty()) {
+            throw std::runtime_error("无法加载测试图片");
+        }
+        timeval t1;
+        gettimeofday(&t1, NULL);
+
+        // 封装图像数据（不复制像素数据）
+        deploy::Image input_image(
+            cv_image.data,     // 像素数据指针
+            cv_image.cols,     // 图像宽度
+            cv_image.rows     // 图像高度
+        );
+
+        // -------------------- 执行推理 --------------------
+        deploy::DetectRes result = detector->predict(input_image);
+        std::cout << result << std::endl;
+
+        timeval t2;
+        gettimeofday(&t2, NULL);
+        std::cout << "inference time: " << (t2.tv_sec - t1.tv_sec) + (t2.tv_usec - t1.tv_usec) / 1000.0 << "ms" << std::endl;
+
+        // -------------------- 结果可视化（示意） --------------------
+        for (int i=0;i<result.boxes.size();i++) {
+            cv::rectangle(cv_image, cv::Point(result.boxes[i].left, result.boxes[i].top), cv::Point(result.boxes[i].right, result.boxes[i].bottom), cv::Scalar(0, 255, 0), 2);
+        }
+        cv::imshow("result", cv_image);
+        cv::waitKey(0);
+
+        // -------------------- 模型克隆演示 --------------------
+        auto cloned_detector = detector->clone();  // 创建独立实例
+        deploy::DetectRes cloned_result = cloned_detector->predict(input_image);
+
+        // 验证结果一致性
+        std::cout << cloned_result << std::endl;
+
+    } catch (const std::exception& e) {
+        std::cerr << "程序异常: " << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }
+    return EXIT_SUCCESS;
+}
+
+
+// trtexec --onnx=/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/best.onnx --saveEngine=best.engine --fp16
+// trtyolo export -w /home/valmorx/DeepLearningSource/ultralytics-main/runs/detect/train11/weights/best.pt -v yolo11 -o output --repo_dir /home/valmorx/DeepLearningSource/ultralytics-main/runs/detect/train11/weights
+
+// trtyolo infer -e /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/yolo11n.engine -m 1 -i /home/valmorx/DeepLearningSource/video -o /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/outputs
+
+// trtyolo export -w yolo11n.pt -v yolo11 -o /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/outputs --imgsz 480 640

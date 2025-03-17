@@ -32,7 +32,6 @@ __global__ void decode2BoxKernel(float* out, int out_width, int out_height, int 
 
         int offset = atomicAdd(&res_infos_offsets[label_max_conf], 1);
         int linear_index = offset + label_max_conf * param.PointX;
-        Info(x1, y1, x2, y2, conf, label_max_conf).printInfo();
         res_infos[linear_index] = Info(x1, y1, x2, y2, conf, label_max_conf);
     }
 }
@@ -62,6 +61,12 @@ void decode2BoxCUDA(cv::Mat &out, double threshold, std::vector<std::vector<Info
     int blocksPerGrid = (param.PointX + threadsPerBlock - 1) / threadsPerBlock;
     decode2BoxKernel<<<blocksPerGrid, threadsPerBlock>>>(d_out.ptr<float>(), out.cols, out.rows, param.num_class, param.onnx_width, param.onnx_height, threshold, d_res_infos, d_res_infos_sizes, d_res_infos_offsets, param);
 
+    // Check for errors in kernel launch
+    cudaError_t err = cudaGetLastError();
+    if (err != cudaSuccess) {
+        printf("CUDA error: %s\n", cudaGetErrorString(err));
+    }
+
     // Copy results back to host
     int* h_res_infos_sizes = new int[param.num_class];
     cudaMemcpy(h_res_infos_sizes, d_res_infos_sizes, param.num_class * sizeof(int), cudaMemcpyDeviceToHost);
@@ -71,6 +76,10 @@ void decode2BoxCUDA(cv::Mat &out, double threshold, std::vector<std::vector<Info
 
     // Resize res_infos
     for (int i = 0; i < param.num_class; i++) {
+        if (h_res_infos_sizes[i] > max_boxes_per_class) {
+            printf("Error: h_res_infos_sizes[%d] (%d) exceeds max_boxes_per_class (%d)\n", i, h_res_infos_sizes[i], max_boxes_per_class);
+            continue;
+        }
         res_infos[i].resize(h_res_infos_sizes[i]);
         for (int j = 0; j < h_res_infos_sizes[i]; j++) {
             res_infos[i][j] = h_res_infos[j + i * max_boxes_per_class];
