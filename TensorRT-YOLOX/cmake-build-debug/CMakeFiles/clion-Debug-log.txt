@@ -2,5 +2,5 @@
 /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/cmake-build-debug
 /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX
 -- Configuring done (0.1s)
--- Generating done (0.1s)
+-- Generating done (0.0s)
 -- Build files have been written to: /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/cmake-build-debug

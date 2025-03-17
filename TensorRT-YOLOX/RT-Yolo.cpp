@@ -29,7 +29,7 @@ int main() {
     auto detector = std::make_unique<deploy::DetectModel>(Engine_Path,option);
 
     // Video Load
-    cv::VideoCapture cap(0,cv::CAP_V4L2);
+    cv::VideoCapture cap(4, cv::CAP_V4L2);
     cap.set(cv::CAP_PROP_FOURCC,cv::VideoWriter::fourcc('M','J','P','G'));
 
     if (!cap.isOpened()) {
@@ -80,8 +80,9 @@ int main() {
 
         }
 
-        //cv::imshow("result",input);
-        if (script == 1000) break;
+        cv::imshow("result",input);
+
+        // if (script == 888) break;
         int c = cv::waitKey(1);
         if (c==27) break;
 

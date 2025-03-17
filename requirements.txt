@@ -1,0 +1,3 @@
+tensorrt_yolo==6.0.0
+tensorrt==10.9.34
+opencv==4.10.0

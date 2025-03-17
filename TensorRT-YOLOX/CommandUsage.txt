@@ -1,6 +1,6 @@
 
-trtexec --onnx=/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/outputs/best.onnx --saveEngine=bestx.engine --shapes=images:1x3x320x320 --fp16
+trtexec --onnx=/home/valmorx/DeepLearningSource/ultralytics-8.3.91/runs/detect/train7/weights/best.onnx --saveEngine=bestx.engine --shapes=images:1x3x320x320 --fp16
 
-trtyolo export -w /home/valmorx/DeepLearningSource/ultralytics-8.3.91/runs/detect/train2/weights/best.pt -v ultralytics -o /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/outputs --max_boxes 100 --iou_thres 0.45 --conf_thres 0.25 -b -1 --imgsz 320 320
+trtyolo export -w /home/valmorx/DeepLearningSource/ultralytics-8.3.91/runs/detect/train7/weights/best.pt -v ultralytics -o /home/valmorx/DeepLearningSource/ultralytics-8.3.91/runs/detect/train7/weights --max_boxes 100 --iou_thres 0.45 --conf_thres 0.25 -b -1 --imgsz 320 320
 
 trtyolo export -w /home/valmorx/DeepLearningSource/ultralytics-8.3.91/runs/detect/train2/weights/best.pt -v yolo11 -o /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/outputs --imgsz 480 640
