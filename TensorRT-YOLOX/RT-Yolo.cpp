@@ -16,6 +16,10 @@
 std::string Engine_Path = "/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/bestx.engine";
 std::string Video_Path = "/home/valmorx/DeepLearningSource/video.mp4";
 
+std::vector<std::string> class_names = {
+    "B1","B2","B3","B4","B5","BO","BS","R1","R2","R3","R4","R5","RO","RS"
+};
+
 int main() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(0);
@@ -78,6 +82,19 @@ int main() {
                 cv::Scalar(0,0,255),
                 2);
 
+            cv::circle(input,res.boxes[i].centerPoint,6,cv::Scalar(0,255,0),-1);
+
+            int baseLine=0;
+            std::string label_text=class_names[res.classes[i]]+" "+std::to_string(res.scores[i]*100)+"%";
+            cv::Size label_size = cv::getTextSize(label_text, cv::FONT_HERSHEY_SIMPLEX, 0.4, 1, &baseLine);
+
+            putText(input,
+                label_text,
+                cv::Point(res.boxes[i].left,res.boxes[i].top-label_size.height),
+                cv::FONT_HERSHEY_SIMPLEX,0.4,cv::Scalar(0,0,255),
+                1,
+                cv::LINE_AA
+            );
         }
 
         cv::imshow("result",input);
