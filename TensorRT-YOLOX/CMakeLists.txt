@@ -29,8 +29,8 @@ link_directories(${PROJECT_BINARY_DIR}/../lib/)
 
 #========= TENSORRT =========
 
-include_directories(/home/valmorx/DeepLearningSource/TensorRT-10.9.0.34/include)
-link_directories(/home/valmorx/DeepLearningSource/TensorRT-10.9.0.34/lib)
+include_directories(/home/valmorx/DeepLearningSource/TensorRT-8.6.1.6/include)
+link_directories(/home/valmorx/DeepLearningSource/TensorRT-8.6.1.6/lib)
 
 #========== EXTRA ==========
 
@@ -40,23 +40,29 @@ link_directories(/home/valmorx/DeepLearningSource/TensorRT-YOLO/lib)
 find_package(Python3 COMPONENTS Interpreter Development)
 include_directories(${Python3_INCLUDE_DIRS})
 
-
-message(${PROJECT_BINARY_DIR})
-message(${PROJECT_SOURCE_DIR})
+#========= Eigen3 ===========
+include_directories(/usr/include/eigen3)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/out)
+
+#====== TensorRT-YOLO =======
 aux_source_directory(/home/valmorx/DeepLearningSource/TensorRT-YOLO/deploy YOLO_SRC)
+
+#======== ByteTrack =========
+include_directories(${PROJECT_SOURCE_DIR}/ByteTrack/include)
+aux_source_directory(${PROJECT_SOURCE_DIR}/ByteTrack/src ByteTrack_SRC)
 
 add_executable(RT-Yolo
         RT-Yolo.cpp
         ${SRC}
         ${YOLO_SRC}
+        ${ByteTrack_SRC}
 )
 
 target_link_libraries(RT-Yolo
         ${OpenCV_LIBS}
         ${Python3_LIBRARIES}
         /home/valmorx/DeepLearningSource/TensorRT-YOLO/lib/libdeploy.so
-
+        /usr/local/cuda/lib64/libcudart.so.12
 
 )

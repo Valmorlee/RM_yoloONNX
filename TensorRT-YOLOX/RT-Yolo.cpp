@@ -10,10 +10,13 @@
 #include "deploy/model.hpp"  // 包含模型推理相关的类定义
 #include "deploy/option.hpp"  // 包含推理选项的配置类定义
 #include "deploy/result.hpp"  // 包含推理结果的定义
+#include <Eigen/Dense>  // Eigen库
+#include <ceres/ceres.h>
 
 #include<opencv2/opencv.hpp>
 
-std::string Engine_Path = "/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/bestx.engine";
+
+std::string Engine_Path = "/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/00x.engine";
 std::string Video_Path = "/home/valmorx/DeepLearningSource/video.mp4";
 
 std::vector<std::string> class_names = {
@@ -33,7 +36,7 @@ int main() {
     auto detector = std::make_unique<deploy::DetectModel>(Engine_Path,option);
 
     // Video Load
-    cv::VideoCapture cap(4, cv::CAP_V4L2);
+    cv::VideoCapture cap(0, cv::CAP_V4L2);
     cap.set(cv::CAP_PROP_FOURCC,cv::VideoWriter::fourcc('M','J','P','G'));
 
     if (!cap.isOpened()) {
@@ -90,7 +93,7 @@ int main() {
 
             putText(input,
                 label_text,
-                cv::Point(res.boxes[i].left,res.boxes[i].top-label_size.height),
+                cv::Point(res.boxes[i].left,res.boxes[i].top-label_size.height / 2),
                 cv::FONT_HERSHEY_SIMPLEX,0.4,cv::Scalar(0,0,255),
                 1,
                 cv::LINE_AA
@@ -99,7 +102,6 @@ int main() {
 
         cv::imshow("result",input);
 
-        // if (script == 888) break;
         int c = cv::waitKey(1);
         if (c==27) break;
 

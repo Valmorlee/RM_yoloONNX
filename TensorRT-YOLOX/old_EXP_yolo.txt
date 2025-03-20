@@ -82,3 +82,15 @@ int main() {
 // trtyolo infer -e /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/yolo11n.engine -m 1 -i /home/valmorx/DeepLearningSource/video -o /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/outputs
 
 // trtyolo export -w yolo11n.pt -v yolo11 -o /home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/outputs --imgsz 480 640
+
+
+
+
+
+
+
+
+
+pip install "pybind11[global]"
+cmake -S . -B build -DTENSORRT_PATH=/home/valmorx/DeepLearningSource/TensorRT-8.6.1.6 -DBUILD_PYTHON=ON
+cmake --build build -j$(nproc) --config Release
