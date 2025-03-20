@@ -45,6 +45,8 @@ public:
 	KAL_COVA covariance;
 	float score;
 
+	Point2f centerPoint;
+
 private:
 	byte_kalman::KalmanFilter kalman_filter;
 };

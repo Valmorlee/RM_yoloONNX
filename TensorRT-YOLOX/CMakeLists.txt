@@ -57,6 +57,7 @@ add_executable(RT-Yolo
         ${SRC}
         ${YOLO_SRC}
         ${ByteTrack_SRC}
+        include/params.hpp
 )
 
 target_link_libraries(RT-Yolo

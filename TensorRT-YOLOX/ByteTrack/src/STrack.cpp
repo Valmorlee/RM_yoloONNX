@@ -18,6 +18,8 @@ STrack::STrack(vector<float> tlwh_, float score)
 	tracklet_len = 0;
 	this->score = score;
 	start_frame = 0;
+
+	centerPoint = Point2f(0, 0);
 }
 
 STrack::~STrack()

@@ -1,13 +1,17 @@
 # ninja log v6
 2	1820	1742393898282168949	CMakeFiles/RT-Yolo.dir/src/Param.cpp.o	360c8c0ac3f33286
-2122	2594	1742471212983778193	/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/out/RT-Yolo	ba5c7b3f719d36b4
-2	2105	1742471158545987716	CMakeFiles/RT-Yolo.dir/ByteTrack/src/STrack.cpp.o	8d2bb34f3a05604c
+2332	2819	1742482039322099171	/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/out/RT-Yolo	ba5c7b3f719d36b4
+2	2262	1742480762587875831	CMakeFiles/RT-Yolo.dir/ByteTrack/src/STrack.cpp.o	8d2bb34f3a05604c
 3	45	1742471158546987638	CMakeFiles/RT-Yolo.dir/ByteTrack/src/lapjv.cpp.o	5942c1d7ba3f896a
-2	2158	1742471158545987716	CMakeFiles/RT-Yolo.dir/ByteTrack/src/bytetrack.cpp.o	3ebee561615ff61d
+2	2286	1742480762587875831	CMakeFiles/RT-Yolo.dir/ByteTrack/src/bytetrack.cpp.o	3ebee561615ff61d
 2	2449	1742468740988049347	CMakeFiles/RT-Yolo.dir/home/valmorx/DeepLearningSource/TensorRT-YOLO/deploy/model.cpp.o	72e660429a6d9ffa
-3	2333	1742471158546987638	CMakeFiles/RT-Yolo.dir/ByteTrack/src/utils.cpp.o	580da0691d1ee637
+2	2490	1742480762587875831	CMakeFiles/RT-Yolo.dir/ByteTrack/src/utils.cpp.o	580da0691d1ee637
 2	7137	1742468740988049347	CMakeFiles/RT-Yolo.dir/home/valmorx/DeepLearningSource/TensorRT-YOLO/deploy/pybind.cpp.o	4a52725e786bc687
-2	2122	1742471210863940658	CMakeFiles/RT-Yolo.dir/RT-Yolo.cpp.o	ba562161ed59baa8
-0	79	1742471795673121716	build.ninja	c81dc7f3efca6666
-2	2209	1742471158545987716	CMakeFiles/RT-Yolo.dir/ByteTrack/src/BYTETracker.cpp.o	2a1c869410eaafe4
+2	2332	1742482036992049784	CMakeFiles/RT-Yolo.dir/RT-Yolo.cpp.o	ba562161ed59baa8
+0	79	1742482628800978568	build.ninja	c81dc7f3efca6666
+2	2355	1742480762587875831	CMakeFiles/RT-Yolo.dir/ByteTrack/src/BYTETracker.cpp.o	2a1c869410eaafe4
 2	5605	1742471158545987716	CMakeFiles/RT-Yolo.dir/ByteTrack/src/kalmanFilter.cpp.o	30738229a92ec414
+3	2452	1742482630638826001	CMakeFiles/RT-Yolo.dir/RT-Yolo.cpp.o	ba562161ed59baa8
+2453	2972	1742482633089623425	/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/out/RT-Yolo	ba5c7b3f719d36b4
+4	2349	1742483065752162225	CMakeFiles/RT-Yolo.dir/RT-Yolo.cpp.o	ba562161ed59baa8
+2349	2830	1742483068097085253	/home/valmorx/CLionProjects/RM_yoloONNX/TensorRT-YOLOX/out/RT-Yolo	ba5c7b3f719d36b4
