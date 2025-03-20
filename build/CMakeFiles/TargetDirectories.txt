@@ -1,5 +1,0 @@
-/home/valmorx/CLionProjects/RM_yoloONNX/build/CMakeFiles/Local_Lib_Static.dir
-/home/valmorx/CLionProjects/RM_yoloONNX/build/CMakeFiles/Local_Lib_Shared.dir
-/home/valmorx/CLionProjects/RM_yoloONNX/build/CMakeFiles/RM_yoloONNX.dir
-/home/valmorx/CLionProjects/RM_yoloONNX/build/CMakeFiles/edit_cache.dir
-/home/valmorx/CLionProjects/RM_yoloONNX/build/CMakeFiles/rebuild_cache.dir
