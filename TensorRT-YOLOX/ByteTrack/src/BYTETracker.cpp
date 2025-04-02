@@ -9,7 +9,7 @@ BYTETracker::BYTETracker(int frame_rate, int track_buffer)
 
 	frame_id = 0;
 	max_time_lost = int(frame_rate / 30.0 * track_buffer);
-	cout << "Init ByteTrack!" << endl;
+	cout << "Init ByteTrack! Ciallo～(∠・ω< )⌒★ " << endl;
 }
 
 BYTETracker::~BYTETracker()
