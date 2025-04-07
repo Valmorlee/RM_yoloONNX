@@ -17,7 +17,7 @@ namespace tools {
     base::dataBox filterBoxes(std::vector<base::dataBox> &boxes);
     void drawRes(cv::Mat &input, base::dataBox &output, Scalar &color);
     void drawRes_tracker(cv::Mat &input, std::vector<STrack> &output);
-    cv::Rect get_centerRect(cv::Point center, int width, int height);                    // 获取以定点作为矩形中心点的矩形
+    cv::Rect get_centerRect(cv::Point2f center, float width, float height);                    // 获取以定点作为矩形中心点的矩形
     std::vector<base::dataBox> revert2Box(const deploy::DetectRes &res);               // yoloBox转换为dataBox | 数据格式转换
     std::vector<Object> revert2Tracker(const deploy::DetectRes &res);                    // yoloBox转换为bytetracker | 数据格式转换
     std::vector<base::dataBox> tracker2Box(vector<STrack> &output);                    // bytetracker转换为dataBox | 数据格式转换

@@ -80,21 +80,23 @@ namespace base {
     public:
 
         //边界版
-        int leftBound;
-        int rightBound;
-        int topBound;
-        int bottomBound;
+        float leftBound;
+        float rightBound;
+        float topBound;
+        float bottomBound;
 
         //坐标版
-        cv::Point leftUp;
-        int width;
-        int height;
+        cv::Point2f leftUp;
+        float width;
+        float height;
 
         cv::Point2f centerPoint;
         float prob;
         int classId;
 
-        dataBox(int leftBound, int rightBound, int topBound, int bottomBound, float prob, int classId) {
+        int ExistTag;
+
+        dataBox(float leftBound, float rightBound, float topBound, float bottomBound, float prob, int classId) {
             this->leftBound = leftBound;
             this->rightBound = rightBound;
             this->topBound = topBound;
@@ -105,9 +107,10 @@ namespace base {
             this->centerPoint = cv::Point2f(leftBound + width / 2.0, topBound + height / 2.0);
             this->prob = prob;
             this->classId = classId;
+            this->ExistTag = 1;
         }
 
-        dataBox(cv::Point leftUp, int width, int height, float prob, int classId) {
+        dataBox(cv::Point2f leftUp, float width, float height, float prob, int classId) {
             this->leftUp = leftUp;
             this->width = width;
             this->height = height;
@@ -118,6 +121,7 @@ namespace base {
             this->centerPoint = cv::Point2f(leftUp.x + width / 2.0, leftUp.y + height / 2.0);
             this->prob = prob;
             this->classId = classId;
+            this->ExistTag = 1;
         }
 
         dataBox(const dataBox &box) {
@@ -131,6 +135,7 @@ namespace base {
             this->centerPoint = box.centerPoint;
             this->prob = box.prob;
             this->classId = box.classId;
+            this->ExistTag = box.ExistTag;
         }
 
         dataBox operator=(const dataBox &box) {
@@ -144,6 +149,7 @@ namespace base {
             this->centerPoint = box.centerPoint;
             this->prob = box.prob;
             this->classId = box.classId;
+            this->ExistTag = box.ExistTag;
             return *this;
         }
 

@@ -15,11 +15,11 @@ namespace tools {
         return false;
     }
 
-    cv::Rect get_centerRect(cv::Point center, int width, int height){
-        int leftBound = center.x - width / 2 > 0 ? center.x - width / 2 : 0;
-        int rightBound = center.x + width / 2 < params::cap_width ? center.x + width / 2 : params::cap_width;
-        int upperBound = center.y - height / 2 > 0 ? center.y - height / 2 : 0;
-        int lowerBound = center.y + height / 2 < params::cap_height ? center.y + height / 2 : params::cap_height;
+    cv::Rect get_centerRect(cv::Point2f center, float width, float height){
+        float leftBound = center.x - width / 2.0 > 0 ? center.x - width / 2.0 : 0;
+        float rightBound = center.x + width / 2.0 < params::cap_width ? center.x + width / 2.0 : params::cap_width;
+        float upperBound = center.y - height / 2.0 > 0 ? center.y - height / 2.0 : 0;
+        float lowerBound = center.y + height / 2.0 < params::cap_height ? center.y + height / 2.0 : params::cap_height;
 
         return cv::Rect(leftBound, upperBound, rightBound - leftBound, lowerBound - upperBound);
     }
@@ -70,8 +70,8 @@ namespace tools {
 
     std::vector<base::dataBox> revert2Box(const deploy::DetectRes &res) {
         std::vector<base::dataBox> boxes;
-        int heightX = params::cap_height / 2 - params::roi_height / 2;
-        int widthX = params::cap_width / 2 - params::roi_width / 2;
+        float heightX = params::cap_height / 2.0 - params::roi_height / 2.0;
+        float widthX = params::cap_width / 2.0 - params::roi_width / 2.0;
         for (int i = 0; i < res.boxes.size(); i++) {
             if (tools::isTracking(res.classes[i])) {
                 boxes.emplace_back(base::dataBox(res.boxes[i].left + widthX, res.boxes[i].right + widthX, res.boxes[i].top + heightX, res.boxes[i].bottom + heightX, res.scores[i], res.classes[i]));
@@ -83,8 +83,8 @@ namespace tools {
 
     std::vector<Object> revert2Tracker(const deploy::DetectRes &res) {
         std::vector<Object> objects;
-        int heightX = params::cap_height / 2 - params::roi_height / 2;
-        int widthX = params::cap_width / 2 - params::roi_width / 2;
+        float heightX = params::cap_height / 2.0 - params::roi_height / 2.0;
+        float widthX = params::cap_width / 2.0 - params::roi_width / 2.0;
         for (int i = 0; i < res.boxes.size(); i++) {
             if (tools::isTracking(res.classes[i])) {
                 Rect_<float> rect(res.boxes[i].left + widthX,res.boxes[i].top + heightX,res.boxes[i].right-res.boxes[i].left,res.boxes[i].bottom-res.boxes[i].top);
@@ -182,10 +182,10 @@ namespace func {
                 break;
             }
 
-            base::roiImg = input(tools::get_centerRect(cv::Point(input.cols/2,input.rows/2),params::roi_width,params::roi_height)).clone();
+            base::roiImg = input(tools::get_centerRect(cv::Point2f(input.cols/2.0,input.rows/2.0),params::roi_width,params::roi_height)).clone();
 
             if (params::isDebug) {
-                rectangle(input,tools::get_centerRect(cv::Point(input.cols/2,input.rows/2),params::roi_width,params::roi_height),cv::Scalar(0,0,255),2);
+                rectangle(input,tools::get_centerRect(cv::Point2f(input.cols/2.0,input.rows/2.0),params::roi_width,params::roi_height),cv::Scalar(0,0,255),2);
             }
 
             if (params::isMonitor) {
@@ -201,7 +201,7 @@ namespace func {
             base::dataBox output = tools::filterBoxes(outBoxes);
             base::dataBox preX = KalmanFilterPre(output);
 
-            base::output_dataBox = output; // 最终输出结果
+            base::output_dataBox = preX; // 最终输出结果
 
             if (params::isMonitor) {
                 // ==================== timeNode 2 ====================
@@ -210,9 +210,9 @@ namespace func {
                 // ====== using roi totally in 4060 with 0.741ms ======
             }
 
-            tools::drawRes(input,output, Scalar(0,0,255));
-            tools::drawRes(input, preX, Scalar(0,255,0));
             if (params::isDebug) {
+                if (output.ExistTag) tools::drawRes(input,output, Scalar(0,0,255));
+                if (output.ExistTag) tools::drawRes(input, preX, Scalar(0,255,0));
                 if (params::isMonitor) cv::putText(input,cv::format("frame: %lld fps: %lld", num_frames, num_frames * 1000000 / total_ms),cv::Point(5,30),cv::FONT_HERSHEY_SIMPLEX,0.5,cv::Scalar(0,0,255),2,cv::LINE_AA);
                 cv::imshow("result",input);
 
@@ -285,14 +285,19 @@ namespace func {
     }
 
     base::dataBox KalmanFilterPre(base::dataBox &box) {
+        // 非跟踪目标直接返回空数据盒
+        if (!box.ExistTag) return {};
+
         base::measurement.at<float>(0) = box.centerPoint.x;
         base::measurement.at<float>(1) = box.centerPoint.y;
+        cout<<box.centerPoint.x<<" "<<box.centerPoint.y<<endl;
 
         base::kf.correct(base::measurement);
 
         base::state = base::kf.predict();
         float predict_x = base::state.at<float>(0);
         float predict_y = base::state.at<float>(1);
+        // cout<<"predict_x:"<<predict_x<<" predict_y:"<<predict_y<<endl;
 
         Rect x = tools::get_centerRect(cv::Point(predict_x,predict_y),box.width,box.height);
 
