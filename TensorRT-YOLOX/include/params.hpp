@@ -48,7 +48,7 @@ namespace params {
 
     };
 
-    // Basic Class Tag // 原始种类标签
+    // Basic Class Tag 原始种类标签
     inline std::vector<std::string> class_names  =   {
 
         "B1","B2","B3","B4","B5","BO","BS",

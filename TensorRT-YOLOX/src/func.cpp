@@ -48,7 +48,7 @@ namespace tools {
 
                 cv::rectangle(input,
                     preBox,
-                    color,2);
+                    color,1);
 
             }
         }
@@ -58,14 +58,14 @@ namespace tools {
     void drawRes(cv::Mat &input, base::dataBox &output, const Scalar &color) {
         cv::putText(input,
             cv::format("%d",output.classId),
-            cv::Point(output.leftBound,output.topBound-5),
+            cv::Point2f(output.leftBound,output.topBound-5),
             0,0.6,color,2,LINE_AA);
 
-        Rect preBox = cv::Rect(output.leftBound,output.topBound,output.width,output.height);
+        Rect2f preBox = cv::Rect2f(output.leftBound,output.topBound,output.width,output.height);
         circle(input,output.centerPoint,6,color,-1);
         cv::rectangle(input,
             preBox,
-            color,2);
+            color,1);
     }
 
     std::vector<base::dataBox> revert2Box(const deploy::DetectRes &res) {
@@ -290,7 +290,7 @@ namespace func {
 
         base::measurement.at<float>(0) = box.centerPoint.x;
         base::measurement.at<float>(1) = box.centerPoint.y;
-        cout<<box.centerPoint.x<<" "<<box.centerPoint.y<<endl;
+        //cout<<box.centerPoint.x<<" "<<box.centerPoint.y<<endl;
 
         base::kf.correct(base::measurement);
 
@@ -299,7 +299,7 @@ namespace func {
         float predict_y = base::state.at<float>(1);
         // cout<<"predict_x:"<<predict_x<<" predict_y:"<<predict_y<<endl;
 
-        Rect x = tools::get_centerRect(cv::Point(predict_x,predict_y),box.width,box.height);
+        Rect x = tools::get_centerRect(cv::Point2f(predict_x,predict_y),box.width,box.height);
 
         return base::dataBox(x.tl(),x.width,x.height,box.prob,box.classId);
     }

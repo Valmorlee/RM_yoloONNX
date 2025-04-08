@@ -32,7 +32,7 @@ namespace func {
     void detect(); // 精检测
     void detect_multi(); // 泛检测
 
-    base::dataBox KalmanFilterPre(base::dataBox &box); // kf
+    base::dataBox KalmanFilterPre(base::dataBox &box); // kf滤波
     void exPnP(); // epnp解算
     void exKalmanFilterPre(); // ekf拓展
 
