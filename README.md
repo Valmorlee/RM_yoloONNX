@@ -9,6 +9,8 @@
 
 > 基础配置： ``Ubuntu 24.04`` ``i9-13900H`` ``RTX4060-Laptop``
 
+> 测试环境： ``Input: 320 x 320`` ``FP16`` 
+
 **预测时间对比：**
 
 |            | **yoloONNX --CPU** | **TensorRT-YOLOX --GPU** | **GPU With ROI** |
